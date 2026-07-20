@@ -50,8 +50,6 @@ A primeira forma é precisa, mas menos comum na linguagem cotidiana. A segunda �
 
 Por esse motivo, recomenda-se evitar utilizar nomes de pessoas como *hostnames*. Escolher nomes de lugares, fenômenos naturais, constelações, rios ou outros conjuntos de nomes coerentes costuma produzir uma nomenclatura mais clara, escalável e fácil de administrar.
 
-[^1]: O nome "São Paulo" não é uma boa escolha para um *hostname*, pois pode se referir tanto ao estado quanto à cidade. Em situações como essa, prefira nomes que identifiquem um único lugar ou utilize convenções adicionais para eliminar ambiguidades.
-
 Uma sugestão de conteúdo é acrescentar um critério técnico para a escolha de *hostnames*. Além de evitar nomes de pessoas, é recomendável que o nome:
 
 * seja curto e fácil de pronunciar;
@@ -62,3 +60,5 @@ Uma sugestão de conteúdo é acrescentar um critério técnico para a escolha d
 * faça parte de uma convenção de nomenclatura (por exemplo, cidades, rios, montanhas, planetas ou constelações).
 
 Essas recomendações aproximam o texto das boas práticas adotadas em administração de sistemas e redes.
+
+[^1]: O nome "São Paulo" não é uma boa escolha para um *hostname*, pois pode se referir tanto ao estado quanto à cidade. Em situações como essa, prefira nomes que identifiquem um único lugar ou utilize convenções adicionais para eliminar ambiguidades.
