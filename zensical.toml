@@ -27,7 +27,7 @@ site_author = "Jurandy Soares"
 # The site_url is the canonical URL for your site. When building online
 # documentation you should set this.
 # Read more: https://zensical.org/docs/setup/basics/#site_url
-#site_url = "https://www.example.com/"
+site_url = "https://mange.ifrn.edu.br/hostname/"
 
 # The copyright notice appears in the page footer and can contain an HTML
 # fragment.
@@ -36,6 +36,9 @@ site_author = "Jurandy Soares"
 copyright = """
 Copyright &copy; 2026 Jurandy Soares
 """
+
+repo_url = "https://github.com/mange-ifrn/mange-hostname"
+edit_uri = "edit/main/docs/"
 
 # Zensical supports both implicit navigation and explicitly defined navigation.
 # If you decide not to define a navigation here then Zensical will simply
