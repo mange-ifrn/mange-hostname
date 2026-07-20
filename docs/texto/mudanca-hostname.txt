@@ -1,0 +1,89 @@
+╭─jurandy@terra ~
+╰─$ grep terra /etc/hostname /etc/hosts
+/etc/hostname:terra
+/etc/hosts:127.0.1.1 terra
+╭─jurandy@terra ~
+╰─$ sudo sd terra tellus /etc/hostname /etc/hosts
+╭─jurandy@terra ~
+╰─$ sudo etckeeper vcs status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   hostname
+        modified:   hosts
+
+no changes added to commit (use "git add" and/or "git commit -a")
+╭─jurandy@terra ~
+╰─$ sudo etckeeper vcs diff
+WARNING: terminal is not fully functional
+Press RETURN to continue
+diff --git a/hostname b/hostname
+index 13619b6..20eb4ec 100644
+--- a/hostname
++++ b/hostname
+@@ -1 +1 @@
+-terra
++tellus
+diff --git a/hosts b/hosts
+index 624269c..89b2113 100644
+--- a/hosts
++++ b/hosts
+@@ -1,5 +1,5 @@
+ 127.0.0.1 localhost
+-127.0.1.1 terra
++127.0.1.1 tellus
+
+ # The following lines are desirable for IPv6 capable hosts
+ ::1     ip6-localhost ip6-loopback
+╭─jurandy@terra ~
+╰─$ hostnamectl
+Transient hostname: terra
+   Static hostname: tellus
+         Icon name: computer-laptop
+           Chassis: laptop 💻
+        Machine ID: 700d1d091e064626a50c5b6939ffdf0c
+           Boot ID: c271846d3963432798f62fc69b91f911
+  Operating System: Ubuntu 26.04 LTS
+            Kernel: Linux 7.0.0-28-generic
+      Architecture: x86-64
+   Hardware Vendor: Dell Inc.
+    Hardware Model: Dell 15 DC15250
+      Hardware SKU: 0D77
+  Hardware Version: A00
+  Firmware Version: 1.10.0
+     Firmware Date: Thu 2026-04-23
+      Firmware Age: 2month 3w 6d
+╭─jurandy@terra ~
+╰─$ hostnamectl --help
+hostnamectl [OPTIONS...] COMMAND ...
+
+Query or change system hostname.
+
+Commands:
+  status                 Show current hostname settings
+  hostname [NAME]        Get/set system hostname
+  icon-name [NAME]       Get/set icon name for host
+  chassis [NAME]         Get/set chassis type for host
+  deployment [NAME]      Get/set deployment environment for host
+  location [NAME]        Get/set location for host
+
+Options:
+  -h --help              Show this help
+     --version           Show package version
+     --no-ask-password   Do not prompt for password
+  -H --host=[USER@]HOST  Operate on remote host
+  -M --machine=CONTAINER Operate on local container
+     --transient         Only set transient hostname
+     --static            Only set static hostname
+     --pretty            Only set pretty hostname
+     --json=pretty|short|off
+                         Generate JSON output
+  -j                     Same as --json=pretty on tty, --json=short otherwise
+
+See the hostnamectl(1) man page for details.
+╭─jurandy@terra ~
+╰─$ hostnamectl hostname tellus
+╭─jurandy@terra ~
+╰─$ hostname
+tellus
